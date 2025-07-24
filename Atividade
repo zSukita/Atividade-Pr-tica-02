@@ -1,0 +1,152 @@
+def conversor_moeda():
+    """
+    1- Conversor de Moeda
+    Converte um valor em reais para dólares e euros
+    """
+    print("="*50)
+    print("1- CONVERSOR DE MOEDA")
+    print("="*50)
+    
+    # Dados fornecidos
+    valor_reais = 100.00
+    taxa_dolar = 5.20
+    taxa_euro = 6.15
+    
+    # Cálculos das conversões
+    valor_dolares = valor_reais / taxa_dolar
+    valor_euros = valor_reais / taxa_euro
+    
+    # Exibição dos resultados
+    print(f"Valor em reais: R$ {valor_reais:.2f}")
+    print(f"Taxa do dólar: R$ {taxa_dolar:.2f}")
+    print(f"Taxa do euro: R$ {taxa_euro:.2f}")
+    print("-" * 30)
+    print(f"Valor em dólares: US$ {valor_dolares:.2f}")
+    print(f"Valor em euros: € {valor_euros:.2f}")
+    print()
+
+
+def calculadora_desconto():
+    """
+    2- Calculadora de Desconto
+    Calcula o desconto em uma loja e o preço final
+    """
+    print("="*50)
+    print("2- CALCULADORA DE DESCONTO")
+    print("="*50)
+    
+    # Dados fornecidos
+    nome_produto = "Camiseta"
+    preco_original = 50.00
+    porcentagem_desconto = 20
+    
+    # Cálculos do desconto
+    valor_desconto = preco_original * (porcentagem_desconto / 100)
+    preco_final = preco_original - valor_desconto
+    
+    # Exibição dos resultados
+    print(f"Produto: {nome_produto}")
+    print(f"Preço original: R$ {preco_original:.2f}")
+    print(f"Porcentagem de desconto: {porcentagem_desconto}%")
+    print("-" * 30)
+    print(f"Valor do desconto: R$ {valor_desconto:.2f}")
+    print(f"Preço final: R$ {preco_final:.2f}")
+    print()
+
+
+def calculadora_media_escolar():
+    """
+    3- Calculadora de Média Escolar
+    Calcula a média escolar de um aluno
+    """
+    print("="*50)
+    print("3- CALCULADORA DE MÉDIA ESCOLAR")
+    print("="*50)
+    
+    # Dados fornecidos
+    nota1 = 7.5
+    nota2 = 8.0
+    nota3 = 6.5
+    
+    # Cálculo da média
+    media = (nota1 + nota2 + nota3) / 3
+    
+    # Exibição dos resultados
+    print("Notas do aluno:")
+    print(f"Nota 1: {nota1:.1f}")
+    print(f"Nota 2: {nota2:.1f}")
+    print(f"Nota 3: {nota3:.1f}")
+    print("-" * 30)
+    print(f"Média final: {media:.2f}")
+    
+    # Status da aprovação (opcional)
+    if media >= 7.0:
+        status = "APROVADO"
+    elif media >= 5.0:
+        status = "RECUPERAÇÃO"
+    else:
+        status = "REPROVADO"
+    
+    print(f"Status: {status}")
+    print()
+
+
+def calculadora_consumo_combustivel():
+    """
+    4- Calculadora de Consumo de Combustível
+    Calcula o consumo médio de combustível de um veículo
+    """
+    print("="*50)
+    print("4- CALCULADORA DE CONSUMO DE COMBUSTÍVEL")
+    print("="*50)
+    
+    # Dados fornecidos
+    distancia = 300  # km
+    combustivel = 25  # litros
+    
+    # Cálculo do consumo médio
+    consumo_medio = distancia / combustivel
+    
+    # Exibição dos resultados
+    print("Dados da viagem:")
+    print(f"Distância percorrida: {distancia} km")
+    print(f"Combustível gasto: {combustivel} litros")
+    print("-" * 30)
+    print(f"Consumo médio: {consumo_medio:.2f} km/l")
+    
+    # Classificação do consumo (opcional)
+    if consumo_medio >= 15:
+        classificacao = "Excelente"
+    elif consumo_medio >= 12:
+        classificacao = "Bom"
+    elif consumo_medio >= 8:
+        classificacao = "Regular"
+    else:
+        classificacao = "Alto consumo"
+    
+    print(f"Classificação: {classificacao}")
+    print()
+
+
+def main():
+    """
+    Função principal que executa todas as calculadoras
+    """
+    print("CALCULADORAS PYTHON")
+    print("Desenvolvido para demonstrar cálculos básicos")
+    print("\n")
+    
+    # Executa todas as calculadoras
+    conversor_moeda()
+    calculadora_desconto()
+    calculadora_media_escolar()
+    calculadora_consumo_combustivel()
+    
+    print("="*50)
+    print("Todas as calculadoras foram executadas!")
+    print("="*50)
+
+
+# Executa o programa
+if __name__ == "__main__":
+    main()
